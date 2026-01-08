@@ -13,6 +13,8 @@
 uv venv .venv
 source ./.venv/bin/activate
 uv pip install -r requirements.txt
+# for basic testing
+uv pip install pytest
 ```
 
 ## 📘 Defining Typed Database Tables with `PydanticTypeModel` and `PydanticTypeTable`
