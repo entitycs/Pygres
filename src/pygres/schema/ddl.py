@@ -1,6 +1,6 @@
 from psycopg import sql
 from pygres.schema.introspection import columns_from_model
-from typing import LiteralString
+from typing_extensions import LiteralString
 from typing import cast
 
 def create_table_ddl(table_name: str, model_cls) -> sql.Composed:
