@@ -1,7 +1,7 @@
 from pygres.db.database import Database
 from pygres.examples.eg import AnalysisRow, AnalysisTable
 from pygres.examples.models import AnalysisRequest, VirtualFile
-
+from pygres.tests.config.internal_config import config
 def test_analysis_round_trip_postgres():
     # Connect to your test DB
     # With separate parameters
@@ -11,7 +11,7 @@ def test_analysis_round_trip_postgres():
         port=5432,
         dbname="testdb",
         user="postgres",
-        password="mysecretpassword"
+        password=config.DB_PW #"mysecretpassword"
     )
     db.execute("DROP TABLE IF EXISTS analysisrow CASCADE")
     aconn = db.conn.cursor()
