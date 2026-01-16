@@ -1,0 +1,19 @@
+[project]
+name = "Pygres"
+version = "0.2.0"
+description = "A lightweight, Pydantic‑first storage layer for persisting typed tool inputs and outputs in PostgreSQL using JSONB."
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.9.0",
+    "psycopg[binary]>=3.3.2",
+    "retry>=0.9.2",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
